@@ -2,11 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Routes from './config/Routes';
 import { setSearch } from './actions';
-import local_coins from './coins.json';
+import localCoins from './coins.json';
 
 class App extends React.Component {
   componentWillMount() {
-    this.props.setSearch(local_coins);
+    this.props.setSearch(localCoins);
   }
 
   render() {

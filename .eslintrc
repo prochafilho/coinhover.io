@@ -1,5 +1,8 @@
 {
   "extends": "airbnb",
+  "settings": {
+    "import/resolver": "webpack"
+  },
   "rules": {
     "comma-dangle": ["error", "never"],
     "semi": ["error", "always"],

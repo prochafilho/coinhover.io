@@ -2,9 +2,9 @@ export const floorCents = num => (Math.floor(num * 100) / 100);
 
 export const round = value => Math.round((value) * 100) / 100;
 
-export const rounder = (balance, price_usd) => round(multiply(balance, floorCents(price_usd)));
-
 export const multiply = (num1, num2) => num1 * num2;
+
+export const rounder = (balance, priceUsd) => round(multiply(balance, floorCents(priceUsd)));
 
 export const numberWithCommas = x => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
