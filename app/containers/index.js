@@ -1,7 +1,7 @@
-export { AssetRow } from './AssetRow/AssetRow';
-export AssetsTable from './AssetsTable/AssetsTable';
-export Header from './Common/Header';
-export SocialMediaFooter from './Common/SocialMediaFooter';
-export Home from './Home/Home';
-export Portfolio from './Portfolio/Portfolio';
-export NoMatch from './NoMatch';
+export { default as AssetRow } from './AssetRow/AssetRow';
+export { default as AssetsTable } from './AssetsTable/AssetsTable';
+export { default as Header } from './Common/Header';
+export { default as SocialMediaFooter } from './Common/SocialMediaFooter';
+export { default as Home } from './Home/Home';
+export { default as Portfolio } from './Portfolio/Portfolio';
+export { default as NoMatch } from './NoMatch';

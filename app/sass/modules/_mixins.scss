@@ -16,15 +16,15 @@ $em-base: 16;
 
 // @include clearfix;
 @mixin clearfix {
-  &:after {
-    content:"";
-    display:table;
-    clear:both;
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
   }
 }
 
 // Disables cursor text selection
-@mixin noselect() {
+@mixin noselect {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -76,11 +76,6 @@ $em-base: 16;
   -moz-border-radius-topright: $tr;
   -moz-border-radius-bottomright: $br;
   -moz-border-radius-bottomleft: $bl;
-
-  border-radius-top-left: $tl;
-  border-radius-top-right: $tr;
-  border-radius-bottom-right: $br;
-  border-radius-bottom-left: $bl;
 }
 
 // @include circle(width);
@@ -91,25 +86,24 @@ $em-base: 16;
 }
 
 // @include bgcover;
-@mixin bgcover() {
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+@mixin bgcover {
+  -webkit-background-size: cover;
+  background-size: cover;
 }
 
 // @include opacity(0);
-@mixin opacity($decimal,$whole) {
-    opacity: $decimal;
-    filter: alpha(opacity=$whole);
+@mixin opacity($decimal, $whole) {
+  opacity: $decimal;
+  filter: alpha(opacity=$whole);
 }
 
 // @include vertical-align;
 @mixin vertical-align {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 // UtilityBelt - a starter kit for any SASS project
@@ -120,39 +114,38 @@ $em-base: 16;
 // @include triangle(down, size, color)
 // $direction: up, down, left, right
 @mixin triangle($direction, $size: 8px, $color: #222) {
-    content: '';
-    display: block;
-    // position: absolute;
-    height: 0; width: 0;
-    @if ($direction == 'up') {
-        border-bottom: $size solid $color;
-        border-left: $size solid transparent;
-        border-right: $size solid transparent;
-    }
-    @else if ($direction == 'down') {
-        border-top: $size solid $color;
-        border-left: $size solid transparent;
-        border-right: $size solid transparent;
-    }
-    @else if ($direction == 'left') {
-        border-top: $size solid transparent;
-        border-bottom: $size solid transparent;
-        border-right: $size solid $color;
-    }
-    @else if ($direction == 'right') {
-        border-top: $size solid transparent;
-        border-bottom: $size solid transparent;
-        border-left: $size solid $color;
-    }
+  content: '';
+  display: block;
+  height: 0; width: 0;
+  @if ($direction == 'up') {
+    border-bottom: $size solid $color;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+  }
+  @else if ($direction == 'down') {
+    border-top: $size solid $color;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+  }
+  @else if ($direction == 'left') {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+  }
+  @else if ($direction == 'right') {
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  }
 }
 
 //@include linear-gradient(color, color);
 @mixin linear-gradient($fromColor, $toColor) {
-    background-color: $toColor;
-    background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor));
-    background-image: -webkit-linear-gradient(top, $fromColor, $toColor);
-    background-image:    -moz-linear-gradient(top, $fromColor, $toColor);
-    background-image:     -ms-linear-gradient(top, $fromColor, $toColor);
-    background-image:         linear-gradient(top, $fromColor, $toColor);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+  background-color: $toColor;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor));
+  // background-image: -webkit-linear-gradient(top, $fromColor, $toColor);
+  // background-image:    -moz-linear-gradient(top, $fromColor, $toColor);
+  // background-image:     -ms-linear-gradient(top, $fromColor, $toColor);
+  // background-image:         linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
 }

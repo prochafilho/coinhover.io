@@ -1,10 +1,8 @@
 import React from 'react';
-import { hashHistory } from 'react-router';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import SocialMediaFooter from '../Common/SocialMediaFooter';
 
-export default function Home(props) {
+export default function Home() {
   return (
     <div className="app-bg">
       <section className="welcome">

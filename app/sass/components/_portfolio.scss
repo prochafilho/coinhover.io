@@ -1,6 +1,6 @@
 .app-bg {
-	position: absolute; width: 100%; height: 100%;
 	@include linear-gradient($purple, $violet);
+	position: absolute; width: 100%; height: 100%;
 }
 
 .plus {
@@ -12,13 +12,12 @@
 .portfolio {
 	position: relative;
 	margin: 0 auto;
-	padding: 15px 30px 30px 30px;
+	padding: 15px 30px 30px;
 
 	header {
 		position: relative;
 		top: 0;
 		border-bottom: 1px solid #666;
-		// font-family: 'Raleway', sans-serif;
 
 		em {
 			position: absolute;
@@ -56,11 +55,11 @@
 	border-top: 1.1em solid rgba(255, 255, 255, 0.2);
 	border-right: 1.1em solid rgba(255, 255, 255, 0.2);
 	border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-	border-left: 1.1em solid #ffffff;
+	border-left: 1.1em solid #fff;
 	-webkit-transform: translateZ(0);
 	-ms-transform: translateZ(0);
 	transform: translateZ(0);
 	-webkit-animation: load8 1.1s infinite linear;
 	animation: load8 1.1s infinite linear;
-	&:after { border-radius: 50%; width: 10em; height: 10em; }
+	&::after { border-radius: 50%; width: 10em; height: 10em; }
 }

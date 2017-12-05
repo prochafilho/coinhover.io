@@ -1,13 +1,13 @@
-import React from 'react';
-import Header from '../Common/Header';
-import AssetsTable from '../AssetsTable/AssetsTable';
+import React, { Component } from 'react';
+import { Header } from '../Common/Header';
+import { AssetsTable } from '../AssetsTable/AssetsTable';
 import SocialMediaFooter from '../Common/SocialMediaFooter';
-import * as api from '../../services/api';
+// import * as api from '../../services/api';
 // import local_coins from '../../coins.json'
 // import { updateLocalCoins } from '../../services/coinFactory'
 // let localCoins = local_coins;
 
-export default class Portfolio extends React.Component {
+class Portfolio extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,9 +18,9 @@ export default class Portfolio extends React.Component {
   componentDidMount() {
     // console.log('Portfolio state', this.state);
     // api.getAllCoins().then((res) => {
-    // 	const portfolioCoins = updateLocalCoins(localCoins, res.data);
-    // 	updatePortfolio(portfolioCoins);
-    // 	this.setState({ assets: portfolioCoins, loading: false });
+    // const portfolioCoins = updateLocalCoins(localCoins, res.data);
+    // updatePortfolio(portfolioCoins);
+    // this.setState({ assets: portfolioCoins, loading: false });
     // });
     this.setState({ loading: false });
   }
@@ -44,3 +44,5 @@ export default class Portfolio extends React.Component {
     );
   }
 }
+
+export default Portfolio;

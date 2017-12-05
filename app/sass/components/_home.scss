@@ -9,18 +9,20 @@
 	a { font-size: 1.2em; color: $green; }
 
 	button {
+		@include text-shadow(1px, 1px, $violet);
+		@include transition(background, .2s, ease-in-out);
+		@include rounded(4px);
 		margin: 20px auto;
 		padding: 15px;
 		width: 180px;
-		color: white;
-		@include text-shadow(1px, 1px, $violet);
+		color: #fff;
 		background: $violet;
 		border: 1px solid lighten($violet, 10%);
-		@include transition(background, .2s, ease-in-out);
-		@include rounded(4px);
+
 		&:hover {
 			background: lighten($violet, 10%);
 		}
+
 		&:active {
 			background: darken($violet, 10%);
 		}

@@ -1,20 +1,19 @@
 .asset-btn,
 .add-btn {
+	@include rounded(5px);
+	@include clearfix;
 	border: 1px solid #666;
 	cursor: pointer;
-	@include rounded(5px);
-	@include clearfix();
 	&:hover { border: 1px solid $offwhite; }
 }
 
 .add-btn {
+	@include noselect;
 	padding: 15px 10px;
-	// width: 238px;
 	width: 173px;
 	text-align: left;
 	opacity: .7;
 	&:hover { background: none; opacity: 1; }
-	@include noselect();
 }
 
 .add-asset-row { margin-top: 10px; }

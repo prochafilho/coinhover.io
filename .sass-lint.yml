@@ -48,13 +48,13 @@ rules:
   declarations-before-nesting: 2
   force-attribute-nesting: 2
   force-element-nesting: 0
-  force-pseudo-nesting: 2
+  force-pseudo-nesting: 0
 
   # Name Formats
   class-name-format: 2
   function-name-format: 2
   id-name-format: 0
-  mixin-name-format: 2
+  mixin-name-format: 0
   placeholder-name-format: 2
   variable-name-format: 0
 

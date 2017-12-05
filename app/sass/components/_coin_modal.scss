@@ -5,19 +5,17 @@
 }
 
 .coin-modal {
+	@include rounded(6px);
+	@include clearfix;
 	position: relative;
 	top: 140px;
 	margin: 0 auto;
 	padding: 20px;
 	width: 280px;
-	color: white;
+	color: #fff;
 	background: $gray;
-	@include rounded(6px);
-	@include clearfix;
 
-	h1 {
-		margin-bottom: 10px;
-	}
+	h1 { margin-bottom: 10px; }
 
 	li {
 		float: left;
@@ -27,13 +25,13 @@
 	.ico-close {
 		position: absolute;
 		left: 330px;
-    	top: 0px;
+    top: 0;
 	}
 }
 
 .ico-coin {
+	@include rounded(4px);
 	width: 32px;
 	height: 32px;
-	background: white;
-	@include rounded(4px);
+	background: #fff;
 }
