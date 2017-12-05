@@ -9,8 +9,10 @@
     "dev": "webpack-dev-server",
     "build": "webpack -p",
     "production": "webpack -p",
-    "test": "eslint app && jest",
-    "test:fix": "eslint --fix app"
+    "test": "yarn run test-eslint; yarn run test-jest:update",
+    "test-eslint": "eslint client",
+    "test-eslint:fix": "eslint --fix client",
+    "test-scsslint": "./node_modules/.bin/sass-lint 'client/styles/**/*.scss' -v -q",
   },
   "now": {
     "name": "coinhover",
