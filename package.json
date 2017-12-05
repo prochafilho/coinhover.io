@@ -12,7 +12,7 @@
     "test": "yarn run test-eslint; yarn run test-jest:update",
     "test-eslint": "eslint client",
     "test-eslint:fix": "eslint --fix client",
-    "test-scsslint": "./node_modules/.bin/sass-lint 'client/styles/**/*.scss' -v -q",
+    "test-scsslint": "./node_modules/.bin/sass-lint 'app/**/*.scss' -v -q",
     "test-jest": "jest",
     "test-jest:watch": "jest --watch",
     "test-jest:coverage": "jest --coverage",
