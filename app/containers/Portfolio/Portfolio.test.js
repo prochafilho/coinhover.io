@@ -10,6 +10,7 @@ describe('<Portfolio /> component', () => {
   it('should render', () => {
     const tree = toJson(wrapper);
     expect(tree).toMatchSnapshot();
+
     expect(wrapper).toHaveLength(1);
   });
 });
