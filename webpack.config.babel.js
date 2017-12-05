@@ -69,19 +69,21 @@ const base = {
       }
     ]
   },
-  resolve: { modules: [path.resolve(__dirname, 'node_modules'), 'node_modules'] }
+  resolve: {
+    modules: [path.resolve(__dirname, 'app'), 'node_modules', path.resolve('node_modules')]
+  }
 };
 
 const developmentConfig = {
-  devServer: {
-    publicPath: '',
-    contentBase: path.join(__dirname, 'coinhover'),
-    quiet: true,
-    inline: true,
-    compress: true,
-    stats: 'errors-only',
-    open: true
-  },
+  // devServer: {
+  //   publicPath: '',
+  //   contentBase: path.join(__dirname, 'coinhover'),
+  //   quiet: true,
+  //   inline: true,
+  //   compress: true,
+  //   stats: 'errors-only',
+  //   open: true
+  // },
   devtool: 'cheap-module-inline-source-map',
   plugins: [
     CopyWebpackPluginConfig,
