@@ -13,6 +13,10 @@
     "test-eslint": "eslint client",
     "test-eslint:fix": "eslint --fix client",
     "test-scsslint": "./node_modules/.bin/sass-lint 'client/styles/**/*.scss' -v -q",
+    "test-jest": "jest",
+    "test-jest:watch": "jest --watch",
+    "test-jest:coverage": "jest --coverage",
+    "test-jest:update": "jest --updateSnapshot"
   },
   "now": {
     "name": "coinhover",
