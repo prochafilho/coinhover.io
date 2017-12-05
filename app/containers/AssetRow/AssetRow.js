@@ -25,6 +25,7 @@ export class AssetRow extends React.Component {
       percentage: props.percentage
     };
 
+    console.log('AssetRow props', props);
     this.handleChange = this.handleChange.bind(this);
     this.remove = this.remove.bind(this);
   }

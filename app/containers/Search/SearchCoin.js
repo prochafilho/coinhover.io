@@ -35,7 +35,9 @@ class SearchCoin extends React.Component {
       this.setState({ coins: this.state.saved });
     };
 
-    text.length > 1 ? search(text) : clearSearch();
+    const handleUpdate = num => (num > 1 ? search(text) : clearSearch());
+
+    return handleUpdate();
   }
 
   clickCoin(coin) {

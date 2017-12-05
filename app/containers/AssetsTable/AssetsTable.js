@@ -14,6 +14,7 @@ export class AssetsTable extends React.Component {
       search: false
     };
     this.closeSearch = this.closeSearch.bind(this);
+    console.log('AssetsTable', props);
   }
 
   closeSearch() {
@@ -21,6 +22,7 @@ export class AssetsTable extends React.Component {
   }
 
   render() {
+    console.log('AssetsTable render...');
     const assets = this.props.portfolio ? this.props.portfolio : [];
 
     const handleClick = (e) => {

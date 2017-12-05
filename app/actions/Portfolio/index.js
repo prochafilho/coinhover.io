@@ -10,6 +10,7 @@ import {
 
 // action creators /////////////////////////////////////////////////////////////
 export function add(portfolio) {
+  console.log('portfolio', portfolio);
   return {
     type: ADD_COIN_PORTFOLIO,
     portfolio
