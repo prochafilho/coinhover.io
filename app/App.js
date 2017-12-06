@@ -1,8 +1,12 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { connect, Provider } from 'react-redux';
+
 import Routes from './config/Routes';
 import { setSearch } from './actions';
 import localCoins from './coins.json';
+
+// Store
+import store from 'store';
 
 class App extends React.Component {
   componentWillMount() {
@@ -11,7 +15,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <Routes />
+      <Provider store={store}>
+        <Routes />
+      </Provider>
     );
   }
 }

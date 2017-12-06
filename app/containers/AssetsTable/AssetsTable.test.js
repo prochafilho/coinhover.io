@@ -3,7 +3,6 @@ import * as enzyme from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { AssetsTable } from './AssetsTable';
 import AssetThead from '../../components/AssetTable/AssetThead';
-import AssetRow from '../assetRow/AssetRow';
 import SearchCoin from '../Search/SearchCoin';
 
 const assetsTable = enzyme.shallow(<AssetsTable />);

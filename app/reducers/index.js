@@ -1,8 +1,9 @@
-import { combineReducers } from 'redux';
 import portfolio from './portfolio';
 import search from './search';
 
-export default combineReducers({
+const reducers = {
   portfolio,
   search
-});
+};
+
+export default reducers;

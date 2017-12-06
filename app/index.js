@@ -1,21 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, applyMiddleware, compose } from 'redux';
-import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
-import reducer from './reducer';
 
+// Components
 import App from './App';
-import css from './coinhover.scss';
+// Styles
+import './coinhover.scss';
 
+// console.log('reducers', reducers);
 const element = document.getElementById('coinhover');
 
-const store = createStore(reducer, compose(
-  applyMiddleware(thunk),
-  window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : noop => noop
-));
-
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>, element);
+ReactDOM.render(<App />, element);

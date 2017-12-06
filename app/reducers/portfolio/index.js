@@ -6,7 +6,11 @@ import {
   REMOVE_COIN_PORTFOLIO
 } from '../../actionTypes';
 
-const initialState = [];
+export const initialState = {
+  portfolio: []
+};
+
+// const initialState = [];
 
 const removeCoin = (coin, state) => {
   const filtered = state.filter(item => item.name !== coin);
