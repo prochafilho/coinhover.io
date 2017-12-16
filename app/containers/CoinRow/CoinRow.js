@@ -14,7 +14,7 @@ import {
 // Actions
 import { removeCoin, updateCoin } from '../../actions';
 
-export class AssetRow extends React.Component {
+export class CoinRow extends React.Component {
   constructor(props) {
     super(props);
 
@@ -25,7 +25,6 @@ export class AssetRow extends React.Component {
       percentage: props.percentage
     };
 
-    console.log('AssetRow props', props);
     this.handleChange = this.handleChange.bind(this);
     this.remove = this.remove.bind(this);
   }
@@ -113,10 +112,10 @@ const mapDispatchToProps = dispatch => ({
   removeCoin: (...args) => { dispatch(removeCoin(...args)); }
 });
 
-const AssetRowContainer = AssetRow;
-export default connect(mapStateToProps, mapDispatchToProps)(AssetRowContainer);
+const CoinRowContainer = CoinRow;
+export default connect(mapStateToProps, mapDispatchToProps)(CoinRowContainer);
 
-AssetRow.propTypes = {
+CoinRow.propTypes = {
   price_usd: PropTypes.string.isRequired,
   value: PropTypes.string
 };

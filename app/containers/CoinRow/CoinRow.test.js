@@ -1,7 +1,7 @@
 import React from 'react';
 import * as enzyme from 'enzyme';
 import toJson from 'enzyme-to-json';
-import { AssetRow } from './AssetRow';
+import { CoinRow } from './CoinRow';
 
 const bitcoin = {
   id: 'bitcoin',
@@ -22,8 +22,8 @@ const bitcoin = {
   last_updated: '1472762067'
 };
 
-const assetRow = enzyme.shallow(
-  <AssetRow
+const coinRow = enzyme.shallow(
+  <CoinRow
     key={bitcoin.id}
     asset={bitcoin}
     balance={bitcoin.balance}
@@ -31,17 +31,17 @@ const assetRow = enzyme.shallow(
     percentage={bitcoin.percentage}
   />);
 
-describe('<AssetRow /> component', () => {
+describe('<CoinRow /> component', () => {
   it('should render', () => {
-    const tree = toJson(AssetRow);
+    const tree = toJson(CoinRow);
     expect(tree).toMatchSnapshot();
   });
 
   it('renders BTC in the symbol area', () => {
-    expect(assetRow.find('strong').text()).toBe('BTC');
+    expect(coinRow.find('strong').text()).toBe('BTC');
   });
 
   it('renders Bitcoin in the name area', () => {
-    expect(assetRow.find('small').text()).toBe('Bitcoin');
+    expect(coinRow.find('small').text()).toBe('Bitcoin');
   });
 });

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Header } from '../Common/Header';
-import { AssetsTable } from '../AssetsTable/AssetsTable';
+import { CoinTable } from '../CoinTable/CoinTable';
 import SocialMediaFooter from '../Common/SocialMediaFooter';
 import * as api from '../../services/api';
 
@@ -31,7 +31,7 @@ class Portfolio extends Component {
               <span>Loading coin data...</span>
             </div>
           ) : (
-            <AssetsTable />
+            <CoinTable />
           )}
           <SocialMediaFooter />
         </section>

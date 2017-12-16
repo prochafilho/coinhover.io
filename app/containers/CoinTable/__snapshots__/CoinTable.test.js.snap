@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<AssetsTable /> component should render 1`] = `
+exports[`<CoinTable /> component should render 1`] = `
 <section
   className="asset-table"
 >
-  <AssetThead />
+  <CoinThead />
   <div
     className="add-asset-row"
   >

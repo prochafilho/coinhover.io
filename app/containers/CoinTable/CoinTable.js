@@ -2,11 +2,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import AssetThead from '../../components/AssetTable/AssetThead';
-import AssetRow from '../AssetRow/AssetRow';
+import CoinThead from '../../components/CoinThead/CoinThead';
+import CoinRow from '../CoinRow/CoinRow';
 import SearchCoin from '../Search/SearchCoin';
 
-export class AssetsTable extends React.Component {
+export class CoinTable extends React.Component {
   constructor(props) {
     super(props);
 
@@ -15,7 +15,7 @@ export class AssetsTable extends React.Component {
     };
 
     this.closeSearch = this.closeSearch.bind(this);
-    console.log('AssetsTable', props);
+    console.log('CoinTable', props);
   }
 
   closeSearch() {
@@ -25,7 +25,7 @@ export class AssetsTable extends React.Component {
   render() {
     const assets = this.props.portfolio ? this.props.portfolio : [];
     // const { assets } = this.props ? this.props : [];
-    console.log('AssetsTable render assets', assets);
+    console.log('CoinTable render assets', assets);
 
     const handleClick = (e) => {
       e.preventDefault();
@@ -34,9 +34,9 @@ export class AssetsTable extends React.Component {
 
     return (
       <section className="asset-table">
-        <AssetThead />
+        <CoinThead />
         { assets.map(asset =>
-          (<AssetRow
+          (<CoinRow
             key={asset.id}
             asset={asset}
             balance={asset.balance}
@@ -59,5 +59,5 @@ export class AssetsTable extends React.Component {
 
 const mapStateToProps = state => (state);
 
-const AssetsTableContainer = AssetsTable;
-export default connect(mapStateToProps, null)(AssetsTableContainer);
+const CoinTableContainer = CoinTable;
+export default connect(mapStateToProps, null)(CoinTableContainer);

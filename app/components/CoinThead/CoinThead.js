@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AssetThead() {
+export default function CoinThead() {
   return (
     <ul className="flex-container">
       <li className="flex-item">

@@ -1,5 +1,5 @@
-export { default as AssetRow } from './AssetRow/AssetRow';
-export { default as AssetsTable } from './AssetsTable/AssetsTable';
+export { default as CoinRow } from './CoinRow/CoinRow';
+export { default as CoinTable } from './CoinTable/CoinTable';
 export { default as Header } from './Common/Header';
 export { default as SocialMediaFooter } from './Common/SocialMediaFooter';
 export { default as Home } from './Home/Home';
