@@ -8,16 +8,7 @@ exports[`<Portfolio /> component should render 1`] = `
     className="portfolio"
   >
     <Header />
-    <div
-      className="loading"
-    >
-      <div
-        className="loader"
-      />
-      <span>
-        Loading coin data...
-      </span>
-    </div>
+    <CoinTable />
     <SocialMediaFooter />
   </section>
 </div>

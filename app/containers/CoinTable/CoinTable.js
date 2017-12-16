@@ -15,7 +15,7 @@ export class CoinTable extends React.Component {
     };
 
     this.closeSearch = this.closeSearch.bind(this);
-    console.log('CoinTable', props);
+    // console.log('CoinTable', props);
   }
 
   closeSearch() {
@@ -25,7 +25,7 @@ export class CoinTable extends React.Component {
   render() {
     const assets = this.props.portfolio ? this.props.portfolio : [];
     // const { assets } = this.props ? this.props : [];
-    console.log('CoinTable render assets', assets);
+    // console.log('CoinTable render assets', assets);
 
     const handleClick = (e) => {
       e.preventDefault();

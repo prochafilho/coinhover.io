@@ -1,9 +1,9 @@
 import React from 'react';
 import * as enzyme from 'enzyme';
 import toJson from 'enzyme-to-json';
-import Portfolio from './Portfolio';
+import { PortfolioJest } from './Portfolio';
 
-const wrapper = enzyme.shallow(<Portfolio />);
+const wrapper = enzyme.shallow(<PortfolioJest />);
 
 describe('<Portfolio /> component', () => {
   it('should render', () => {

@@ -1,17 +1,21 @@
 // import * as R from 'ramda';
-// import * as api from '../../services/api';
+import * as api from '../../services/api';
 
 import * as actionTypes from '../../actionTypes';
 
+const { GET_COINS } = actionTypes;
+
 // action creators /////////////////////////////////////////////////////////////
-export function set(searchedCoins) {
+export function get(coins) {
+  console.log('get coins', coins);
   return {
-    type: actionTypes.SET_COINS_SEARCH,
-    searchedCoins
+    type: GET_COINS,
+    coins
   };
 }
 
 // actions /////////////////////////////////////////////////////////////////////
-export function setSearch(coins) {
-  return dispatch => dispatch(set(coins));
-}
+export const getCoins = () => dispatch => api.getAllCoins().then((res) => {
+  console.log('res', res);
+  dispatch(get(res.data));
+});

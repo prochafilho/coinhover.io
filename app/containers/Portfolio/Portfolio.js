@@ -1,31 +1,27 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+// Components
 import { Header } from '../Common/Header';
 import { CoinTable } from '../CoinTable/CoinTable';
 import SocialMediaFooter from '../Common/SocialMediaFooter';
-import * as api from '../../services/api';
+
+// Actions
+import { getCoins } from '../../actions';
 
 class Portfolio extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: true
-    };
-  }
-
-  // @TODO Pull saved data from localStorage and make api calls
   componentDidMount() {
-    api.getAllCoins().then((res) => {
-      console.log('res', res);
-      this.setState({ loading: false });
-    });
+    this.props.getCoins();
   }
 
   render() {
+    const { loading } = this.props;
+
     return (
       <div className="app-bg">
         <section className="portfolio">
           <Header />
-          { this.state.loading ? (
+          { loading ? (
             <div className="loading">
               <div className="loader" />
               <span>Loading coin data...</span>
@@ -40,4 +36,15 @@ class Portfolio extends Component {
   }
 }
 
-export default Portfolio;
+export const PortfolioJest = Portfolio;
+
+const mapDispatchToProps = dispatch => ({
+  getCoins: (...args) => dispatch(getCoins(...args))
+});
+
+const mapStateToProps = ({ coins, loading }) => ({
+  coins,
+  loading
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Portfolio);
