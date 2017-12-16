@@ -1,5 +1,5 @@
-import * as R from 'ramda';
-import * as api from '../../services/api';
+// import * as R from 'ramda';
+// import * as api from '../../services/api';
 
 import * as actionTypes from '../../actionTypes';
 
