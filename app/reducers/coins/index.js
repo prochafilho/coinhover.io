@@ -13,7 +13,7 @@ export default (state = initialState, action) => {
     case GET_COINS:
       return {
         ...state,
-        collection: action.payload,
+        collection: action.coins,
         loading: false
       };
 

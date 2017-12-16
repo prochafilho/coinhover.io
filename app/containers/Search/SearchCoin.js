@@ -10,7 +10,7 @@ class SearchCoin extends React.Component {
     console.log('SearchCoin', props);
 
     this.state = {
-      coins: props.search[0],
+      coins: props.coins,
       saved: props.search[0]
     };
 
@@ -52,12 +52,12 @@ class SearchCoin extends React.Component {
   }
 
   render() {
-    const coins = this.state.coins.map(coin => (
+    const { coins } = this.props;
+    console.log('coins.collection', coins.collection);
+
+    const searchCoins = coins.collection.map(coin => (
       <li key={coin.id}>
         <button onClick={() => this.clickCoin(coin)}>
-          <div className="coin-logo">
-            <img alt={coin.id} src={coin.logo} />
-          </div>
           <span>{ coin.name }</span>
         </button>
       </li>
@@ -79,7 +79,7 @@ class SearchCoin extends React.Component {
         <div className="coins-container">
           <div className="coin-select">
             <ul>
-              { coins }
+              { searchCoins }
             </ul>
           </div>
         </div>
@@ -89,7 +89,8 @@ class SearchCoin extends React.Component {
   }
 }
 
-const mapStateToProps = ({ search }) => ({
+const mapStateToProps = ({ coins, search }) => ({
+  coins,
   search
 });
 
