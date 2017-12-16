@@ -3,12 +3,10 @@
 
 import * as actionTypes from '../../actionTypes';
 
-const { SET_COINS_SEARCH } = actionTypes;
-
 // action creators /////////////////////////////////////////////////////////////
 export function set(searchedCoins) {
   return {
-    type: SET_COINS_SEARCH,
+    type: actionTypes.SET_COINS_SEARCH,
     searchedCoins
   };
 }
