@@ -1,8 +1,4 @@
-export const linkLogo = (coin, remote_coin) => {
-  remote_coin.logo = coin.logo;
-  return remote_coin;
-};
-
+/* eslint-disable no-param-reassign */
 export const formatPriceUSD = (coin) => {
   coin.price_usd = Number(coin.price_usd).toFixed(2);
   return coin;

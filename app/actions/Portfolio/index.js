@@ -1,6 +1,6 @@
 import * as R from 'ramda';
 import * as api from '../../services/api';
-import { linkLogo, formatPriceUSD, zeroBalanceValue } from '../../utils/modifier';
+import { formatPriceUSD, zeroBalanceValue } from '../../utils/modifier';
 
 import {
   ADD_COIN_PORTFOLIO,
@@ -36,7 +36,6 @@ export function addCoin(coin) {
   return dispatch =>
     api.getCoin(coin.id)
       .then(res => R.head(res.data))
-      .then(remoteCoin => linkLogo(coin, remoteCoin))
       .then(remoteCoin => zeroBalanceValue(remoteCoin))
       .then(remoteCoin => formatPriceUSD(remoteCoin))
       .then(remoteCoin => dispatch(add(remoteCoin)));

@@ -43,6 +43,7 @@ class SearchCoin extends React.Component {
   }
 
   clickCoin(coin) {
+    console.log('clickCoin coin', coin);
     this.props.addCoin(coin);
     this.props.closeSearch();
   }
@@ -53,7 +54,7 @@ class SearchCoin extends React.Component {
 
   render() {
     const { coins } = this.props;
-    console.log('coins.collection', coins.collection);
+    // console.log('coins.collection', coins.collection);
 
     const searchCoins = coins.collection.map(coin => (
       <li key={coin.id}>
