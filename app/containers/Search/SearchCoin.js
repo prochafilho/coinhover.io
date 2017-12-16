@@ -7,6 +7,8 @@ class SearchCoin extends React.Component {
   constructor(props) {
     super(props);
 
+    console.log('SearchCoin', props);
+
     this.state = {
       coins: props.search[0],
       saved: props.search[0]

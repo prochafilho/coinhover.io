@@ -2,22 +2,22 @@ import React, { Component } from 'react';
 import { Header } from '../Common/Header';
 import { AssetsTable } from '../AssetsTable/AssetsTable';
 import SocialMediaFooter from '../Common/SocialMediaFooter';
-// import * as api from '../../services/api';
+import * as api from '../../services/api';
 
 class Portfolio extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     loading: true
-  //   };
-  // }
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true
+    };
+  }
 
   // @TODO Pull saved data from localStorage and make api calls
   componentDidMount() {
-    // api.getAllCoins().then((res) => {
-    //   console.log('res', res);
-    //   this.setState({ loading: false });
-    // });
+    api.getAllCoins().then((res) => {
+      console.log('res', res);
+      this.setState({ loading: false });
+    });
   }
 
   render() {
@@ -25,14 +25,14 @@ class Portfolio extends Component {
       <div className="app-bg">
         <section className="portfolio">
           <Header />
-          {/* { this.state.loading ? (
+          { this.state.loading ? (
             <div className="loading">
               <div className="loader" />
               <span>Loading coin data...</span>
             </div>
-          ) : ( */}
-          <AssetsTable />
-          {/* // )} */}
+          ) : (
+            <AssetsTable />
+          )}
           <SocialMediaFooter />
         </section>
       </div>
