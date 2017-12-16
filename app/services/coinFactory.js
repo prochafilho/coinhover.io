@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import * as R from 'ramda';
 
 export const storage = {
@@ -15,12 +16,12 @@ export const findCoins = (text) => {
   return R.reject(R.isNil, matches);
 };
 
-export const getLocalCoins = () => storage.coins;
-
-// export const updatePortfolio = (coins) => storage.portfolio = coins; // Use with localStorage
-export const getPortfolio = () => storage.portfolio;
-
-export const addToPortfolio = (coin) => {
-  storage.portfolio.push(coin);
-  return getPortfolio();
-};
+export const cleanCoins = coins => coins.map((coin) => {
+  delete coin.available_supply;
+  delete coin.last_updated;
+  delete coin.market_cap_usd;
+  delete coin.max_supply;
+  delete coin.price_btc;
+  delete coin.total_supply;
+  return coin;
+});

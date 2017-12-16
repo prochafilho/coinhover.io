@@ -3,11 +3,12 @@ import * as api from '../../services/api';
 
 import * as actionTypes from '../../actionTypes';
 
+import { cleanCoins } from '../../services/coinFactory';
+
 const { GET_COINS } = actionTypes;
 
 // action creators /////////////////////////////////////////////////////////////
 export function get(coins) {
-  console.log('get coins', coins);
   return {
     type: GET_COINS,
     coins
@@ -16,6 +17,6 @@ export function get(coins) {
 
 // actions /////////////////////////////////////////////////////////////////////
 export const getCoins = () => dispatch => api.getAllCoins().then((res) => {
-  console.log('res', res);
-  dispatch(get(res.data));
+  const cleanedCoins = cleanCoins(res.data);
+  dispatch(get(cleanedCoins));
 });
