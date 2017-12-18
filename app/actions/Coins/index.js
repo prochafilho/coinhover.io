@@ -18,5 +18,6 @@ export function get(coins) {
 // actions /////////////////////////////////////////////////////////////////////
 export const getCoins = () => dispatch => api.getAllCoins().then((res) => {
   const cleanedCoins = cleanCoins(res.data);
+  console.log('cleanedCoins', cleanedCoins);
   dispatch(get(cleanedCoins));
 });
